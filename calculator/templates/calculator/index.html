@@ -1,0 +1,17 @@
+{% extends 'calculator/base.html' %}
+ 
+{% block content %}
+<h1>Strategy Pattern Calculator</h1>
+ 
+<form method='post'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type='submit'>Calculate</button>
+</form>
+ 
+{% if result %}
+<div class='result-box'>
+  {{ result.a }} {{ result.symbol }} {{ result.b }} = <strong>{{ result.result }}</strong>
+</div>
+{% endif %}
+{% endblock %}

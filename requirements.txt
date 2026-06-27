@@ -1,0 +1,8 @@
+asgiref==3.11.1
+certifi==2026.6.17
+chardet==4.0.0
+Django==6.0.6
+idna==2.10
+requests==2.25.1
+sqlparse==0.5.5
+urllib3==1.26.20

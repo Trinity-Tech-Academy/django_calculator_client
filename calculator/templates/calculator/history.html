@@ -1,0 +1,20 @@
+{% extends 'calculator/base.html' %}
+ 
+{% block content %}
+<h1>Computation History</h1>
+ 
+{% if entries %}
+  <ul>
+  {% for entry in entries %}
+    <li>{{ entry }}</li>
+  {% endfor %}
+  </ul>
+ 
+  <form method='post'>
+    {% csrf_token %}
+    <button type='submit'>Clear History</button>
+  </form>
+{% else %}
+  <p>No computations recorded yet.</p>
+{% endif %}
+{% endblock %}
